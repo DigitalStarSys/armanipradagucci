@@ -1,0 +1,123 @@
+/* system page */
+
+section.systemdir {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+section.systemdir > section.headmate {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 3px solid lightgray;
+    margin-bottom: 10px;
+}
+
+section.headmate img {
+    order: 1;
+    width: 20%;
+    margin: 3%;
+    align-self: center;
+    border: 3px solid lightgray;
+    border-radius: 10px;
+
+}
+
+section.headmate span {
+    margin: 3%;
+    order: 2;
+    width: 70%;
+}
+
+/* tech & landing page */
+
+section.techdir {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+
+section.techdir > section.devicebox {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 3px solid lightgray;
+    margin-bottom: 10px;
+    align-items: stretch;
+    margin-right: var(--layout-inmargin);
+}
+
+section.techdir > section.devicebox:last-child {
+    margin-right: 0;
+}
+
+/* side-by-side columns */
+
+section.sidebyside {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+section.sidebyside > section.columnA {
+    width: 50%;
+    order: 0;
+}
+
+section.sidebyside > section.columnB {
+    width: 50%;
+    order: 1;
+}
+
+
+@media (max-width: 400px) {
+    section.techdir > section.devicebox {
+        flex-direction: column;
+    }
+}
+
+section.techdir > section.devicebox > section.device{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+section.devicebox a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+section.device img {
+    order: 0;
+    width: 80%;
+    align-self: center;
+    border-radius: 10px;
+    margin-top: 3%;
+    text-align: center;
+}
+
+section.device p.name {
+    text-decoration: underline;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+section.device p.subtitle {
+    font-style: italic;
+    margin-top: 2%;
+    color: lightgray;
+    font-size: 16px;
+    text-align: center;
+}
+
+section.device p.fedisubtitle {
+    font-style: italic;
+    color: lightgray;
+    font-size: 0.7em;
+    margin-top: 7px;
+    text-align: center;
+}
